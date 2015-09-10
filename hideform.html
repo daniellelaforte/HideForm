@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="bear">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="hideform.js"></script>
+<link rel="stylesheet" type="text/css" href="hideform.css">
+	<title>Hide a Form Using Angular</title>
+</head>
+<body ng-controller="polarbearcontroller">
+<div ng-click="Show()">{{message}}
+</div>
+
+<div ng-class="classname" class="fortheform">
+<form>
+  First name:<br>
+  <input type="text" name="firstform"  ng-model="firstmodel">
+  <br>
+  Bio:<br>
+  <input type="text" name="bioform" ng-model="firstbio">
+  <br>
+  Favorite Books:<br>
+  <input type="text" name="favbooksform" ng-model="firstbook">
+   <br>
+  Favorite Javascript Libraries:<br>
+  <input type="text" name="favlibform" ng-model="firstlib"><br>
+  <input ng-click="Sure($event)" type="submit" value="Submit">
+</form>
+</div>
+
+<ul>
+<li>name: {{firstname}}</li>
+<li>bio:  {{bio}}</li>
+<li>favorite books: {{favbooks}}</li>
+<li>favorite Javascript libraries: {{favlib}}</li>
+</ul>
+
+
+</body>
+</html>
